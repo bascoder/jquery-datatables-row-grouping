@@ -185,11 +185,11 @@
                 if (properties.bExpandableGrouping && properties.bExpandableGrouping2) {
 
                     if (!_fnIsGroupCollapsed(oGroup.dataGroup)) {
-                        nCell2.className += " expanded-group";
-                        oGroup.state = "expanded";
-                    } else {
                         nCell2.className += " collapsed-group";
                         oGroup.state = "collapsed";
+                    } else {
+                        nCell2.className += " expanded-group";
+                        oGroup.state = "expanded";
                     }
                     nCell2.className += " group-item-expander";
                     $(nCell2).attr('data-group', oGroup.dataGroup);
@@ -198,6 +198,8 @@
                 }
 
                 nGroup2.appendChild(nCell2);
+                // TODO check if grouping1 is expanded or collapsed
+                $(nGroup2).hide();
 
                 oParentGroup.aoSubgroups[oGroup.dataGroup] = oGroup;
                 aoGroups[oGroup.dataGroup] = oGroup;
