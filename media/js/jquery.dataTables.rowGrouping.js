@@ -199,7 +199,7 @@
 
                 nGroup2.appendChild(nCell2);
                 // TODO check if grouping1 is expanded or collapsed
-                $(nGroup2).hide();
+                //$(nGroup2).hide();
 
                 oParentGroup.aoSubgroups[oGroup.dataGroup] = oGroup;
                 aoGroups[oGroup.dataGroup] = oGroup;
